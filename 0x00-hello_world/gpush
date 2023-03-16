@@ -1,0 +1,2 @@
+#!/bin/bash
+chmod u+x [0-99]*; git add . ; git commit -am "commit message" ; git push
