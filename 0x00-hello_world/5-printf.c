@@ -1,10 +1,11 @@
 #include <stdio.h>
 /**
- * my_function - This is a description
+ * main - This is a description
+ * Return: 0 if excuted properly, non zero otherwise
  */
-void my_function(void)
+int main()
 {
-	puts("\"Programming is like building a multilingual puzzle")
+	printf("with proper grammar, but the outcome is a piece of art,\n");
 
 	return (0);
 }
