@@ -1,5 +1,5 @@
 #include <stdio.h>
 int main(void) {
-printf("hell");
+printf("%lu\n", sizeof(int));
 return 0;
 }
