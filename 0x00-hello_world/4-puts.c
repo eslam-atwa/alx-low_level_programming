@@ -3,7 +3,7 @@
  * main - This is a description
  * Return: 0 if excuted properly, non zero otherwise
  */
-int main()
+int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
 
