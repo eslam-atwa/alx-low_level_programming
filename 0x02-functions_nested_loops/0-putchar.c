@@ -10,8 +10,8 @@ int main(void)
 
 	while (i <= 8)
 		{
-		putchar(pu[i]);
-		i++
+		_putchar(pu[i]);
+		i++;
 		}
 	return (0);
 }
