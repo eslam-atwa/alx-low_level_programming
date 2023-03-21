@@ -1,18 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
-* main - The start and end function prints "a-z"
-* Return: 0 in if successful
-*/
+ * print_alphabet - Entry point
+ * Return:0
+ */
+
 void print_alphabet(void)
 {
-	char m = 'a';
+	char c = 'a';
 
-	for (m = 97; m <= 'z'; m++)
+	while (c <= 'z')
 	{
-		if (m == 'q' || m == 'e')
-			continue;
-		putchar(m);
+		_putchar(c);
+		c++;
+
 	}
-	putchar('\n');
+	_putchar('\n');
+
 }
