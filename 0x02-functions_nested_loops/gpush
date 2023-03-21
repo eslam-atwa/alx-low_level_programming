@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod u+x [0-99]*; git add . ; git commit -am "commit message" ; cat eslam-atwa; cat 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; git push
+chmod u+x [0-99]*; git add . ; git commit -am "commit message" ; git push
