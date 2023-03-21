@@ -1,4 +1,3 @@
-
 #include "main.h"
 /**
  * main - evaluates an integer
@@ -6,9 +5,13 @@
  */
 int main(void)
 {
-	char pu[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
-	
-	for (int i = 0; i <= 8; i++)
+	int i = 0;
+	char pu[9] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
+
+	while (i <= 8)
+		{
 		putchar(pu[i]);
+		i++
+		}
 	return (0);
 }
