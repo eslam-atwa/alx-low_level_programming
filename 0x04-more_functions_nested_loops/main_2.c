@@ -7,6 +7,11 @@
  */
 int main(void)
 {
+	print_diagonal(8);
+	print_diagonal(0);
 	print_diagonal(3);
+	print_diagonal(98);
 	return (0);
 }
+
+	
