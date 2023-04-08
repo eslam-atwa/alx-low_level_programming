@@ -1,2 +1,3 @@
-This is my first time making a static c library.
+this is a read me md file 
+it has info about the current repo
 
