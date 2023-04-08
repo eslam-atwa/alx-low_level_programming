@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - prints the argument count.
  * Return: returns 0 if excuted properly.
@@ -11,7 +12,7 @@ int main(int argc, char **argv)
 {
 	int i = 1;
 	int sum = 0;
-	int n;
+	int n, m, s;
 
 	if (argc == 1)
 	{
@@ -21,8 +22,10 @@ int main(int argc, char **argv)
 	else if (argc > 1)
 		while (i < argc)
 		{
-			n = atoi(argv[i]);
-			if (!(n))
+			n = (atoi(argv[i]));
+			s = *argv[i];
+			m = isdigit(s);
+			if (m == 0)
 			{
 				printf("Error\n");
 				return (1);
