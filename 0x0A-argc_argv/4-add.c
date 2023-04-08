@@ -14,10 +14,10 @@ int main(int argc, char **argv)
 	int sum = 0;
 	int n, m, s;
 
-	if (argc == 1)
+	if (argc <= 1)
 	{
-		printf("0\n");
-		return (0);
+        	printf("%d\n", sum);
+        	return (0);
 	}
 	else if (argc > 1)
 		while (i < argc)
