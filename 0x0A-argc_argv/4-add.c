@@ -10,32 +10,19 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 1;
 	int sum = 0;
-	int n, m, s;
+	int n, m, s, i;
 
 	if (argc <= 1)
 	{
         	printf("%d\n", sum);
         	return (0);
 	}
-	else if (argc > 1)
-		while (i < argc)
+	else
+	{
+		for (i = 1; i < argc)
 		{
-			n = (atoi(argv[i]));
-			s = *argv[i];
-			m = isdigit(s);
-			if (m == 0)
-			{
-				printf("Error\n");
-				return (1);
-			}
-			else
-			{
-				sum += n;
-				i++;
-			}
-		}
+			for
 	printf("%d\n", sum);
 	return (0);
 }
