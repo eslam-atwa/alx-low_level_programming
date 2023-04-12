@@ -10,6 +10,10 @@ char *str_concat(char *s1, char *s2)
 	char *ar;
 	unsigned int i, size1 = 0, size2 = 0, m;
 
+	if (s1 == NULL)
+		return (NULL);
+	if (s2 == NULL)
+		return (NULL);
 	while (s1[size1])
 		size1++;
 	while (s2[size2])
