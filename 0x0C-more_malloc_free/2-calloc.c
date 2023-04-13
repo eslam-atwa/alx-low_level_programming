@@ -11,18 +11,17 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-        unsigned int i;
+	unsigned int i;
 
-        for (i = 0; i < n; i++)
-        {
-                s[i] = b;
-        }
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
 
-        return (s);
+	return (s);
 }
-
 /**
- * *calloc - craete array memory.
+ * *_calloc - craete array memory.
  * @nmemb: number of elements.
  * @size: size.
  * Return: pointer.
@@ -35,10 +34,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	ar = malloc((size * nmemb));
-
 	if (ar == NULL)
 		return (NULL);
+
 	_memset(ar, 0, (size * nmemb));
-	
 	return (ar);
 }
