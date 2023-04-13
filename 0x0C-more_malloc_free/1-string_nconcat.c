@@ -10,37 +10,45 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int size1 = 0, size2 = 0, l = 0, i, len;
-	char *ar;
+        char *ar;
+        unsigned int i = 0, ii = 0, size1 = 0, size2 = 0;
 
-	if (s1 != NULL)
+	if (s1)
 	{
-		while (s1[size1])
-			size1++;
+        	while (s1 && s1[size1])
+                	size1++;
 	}
-	if (s2 != NULL)
+	if (s2)
 	{
-		while (s2[size2])
-		size2++;
+        	while (s2 && s2[size2])
+                	size2++;
 	}
-	else
+        if (n < size2)
+                ar = malloc(sizeof(char) * (size1 + n + 1));
+        else
+                ar = malloc(sizeof(char) * (size1 + size2 + 1));
+
+        if (ar == NULL)
+                return (NULL);
+
+        for (i = 0; i < size1; i++)
+        {
+                ar[i] = s1[i];
+                i++;
+        }
+
+	for (ii = 0; n < size2 && i < (size1 + n); ii++)
 	{
-		size2 = 0;
-		n = 0;
+                ar[i] = s2[ii];
+		i++;
 	}
-	if (n >= size2)
-		n = size2;
-	len = (size1 + n + 1);
-	ar = malloc(sizeof(char) * len);
-	if (ar == NULL)
-		return (NULL);
-	for (i = 0; i < size1; i++)
-		ar[i] = s1[i];
-	for (i = size1; i < (len - 1); i++)
+        for (ii = 0; n >= size2 && i < (size1 + size2); ii++)
 	{
-		ar[i] = s2[l];
-		l++;
+                ar[i] = s2[ii];
+		i++;
 	}
-	ar[len] = '\0';
-	return (ar);
+
+        ar[i] = '\0';
+
+        return (ar);
 }
