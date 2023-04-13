@@ -14,10 +14,10 @@ int *array_range(int min, int max)
 
 	if (size < 0)
 		return (NULL);
-	mem = malloc((sizeof(int) * size + 1));
+	mem = malloc((sizeof(int) * (size + 1)));
 	if (mem == NULL)
 		return (NULL);
-	for(i = 0; i <= size; i++)
+	for (i = 0; i <= size; i++)
 	{
 		mem[i] = n;
 		n++;
