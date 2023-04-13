@@ -10,17 +10,13 @@ char *str_concat(char *s1, char *s2)
 	char *ar;
 	unsigned int i, size1 = 0, size2 = 0, m;
 
-	if (s1 == NULL)
-		return (NULL);
-	if (s2 == NULL)
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
 	while (s1[size1])
 		size1++;
 	while (s2[size2])
 		size2++;
 	ar = malloc(sizeof(char) * (size1 + size2 + 1));
-	if (ar == NULL)
-		return (NULL);
 	for (i = 0; i < (size1); i++)
 		ar[i] = s1[i];
 	m = size1;
