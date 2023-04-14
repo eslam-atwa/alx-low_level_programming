@@ -28,12 +28,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (ar == NULL)
 		return (NULL);
 
-	while (i < size1)
+	while (s1 && i < size1)
 	{
 		ar[i] = s1[i];
 		i++;
 	}
-	while (ii < n)
+	while (ii < n && s2)
 	{
 		ar[i++] = s2[ii++];
 	}

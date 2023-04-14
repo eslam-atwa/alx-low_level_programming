@@ -11,7 +11,7 @@ int main(void)
 {
     char *concat;
 
-    concat = string_nconcat("dsf", "testring", 5);
+    concat = string_nconcat("dsf", NULL, 5);
     printf("%s\n", concat);
     free(concat);
     return (0);
