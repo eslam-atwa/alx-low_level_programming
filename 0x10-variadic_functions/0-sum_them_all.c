@@ -9,6 +9,7 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int i;
 	int x = 0;
 	va_list m;
+
 	va_start(m, n);
 
 	for (i = 0; i < n; i++)
