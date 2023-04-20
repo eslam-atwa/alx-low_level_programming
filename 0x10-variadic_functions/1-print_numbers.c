@@ -5,12 +5,6 @@
  * @separator: seprator.
  * @n: number of elements.
  */
-void print_numbers(const char *separator, const unsigned int n, ...);
-int main(void)
-{
-    print_numbers(", ", 6, 0, 98,NULL, -1024, 402, 4);
-    return (0);
-}
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
