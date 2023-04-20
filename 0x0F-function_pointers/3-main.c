@@ -21,14 +21,14 @@ int main(int argc, char *argv[])
 	}
 	ar1 = atoi(argv[1]);
 	ar2 = atoi(argv[3]);
-	func = get_op_func(argv[2]);
+	func = get_op_func(argv[3]);
 
 	if (func != 0)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	m = *argv[2];
+	m = *argv[3];
 
 	if ((m == '/' || m == '%') && ar2 == 0)
 	{
