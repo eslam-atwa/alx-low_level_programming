@@ -10,6 +10,8 @@ void print_all(const char * const format, ...)
 	char *str;
 	va_list m;
 
+	if (format == NULL)
+		return;
 	va_start(m, format);
 	while (format[len])
 		len++;
