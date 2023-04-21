@@ -6,7 +6,7 @@
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, len = 0;
+	unsigned int i = 0, len = 0, check;
 	char *str;
 	va_list m;
 
@@ -15,6 +15,7 @@ void print_all(const char * const format, ...)
 		len++;
 	while (i < len)
 	{
+		check = 0;
 		switch (format[i])
 		{
 			case 'c':
@@ -31,10 +32,11 @@ void print_all(const char * const format, ...)
 			printf("%f", va_arg(m, double));
 			break;
 			default:
+			check = 1;
 			break;
 		}
 		i++;
-		if (i < (len))
+		if (i < (len) && check == 0)
 			printf(", ");
 	}
 	va_end(m);
