@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <unistd.h>
 /**
  * print_all - prints all.
  * @format: format.
@@ -21,10 +22,10 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-			printf("%c", va_arg(m, int));
+			write(0, "dsf", (sizeof(char) * 4));
 			break;
 			case 'i':
-			 printf("%d", va_arg(m, int));
+			printf("%d", va_arg(m, int));
 			break;
 			case 's':
 			str = va_arg(m, char *);
