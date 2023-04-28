@@ -2,5 +2,5 @@
 int main(void)
 {
 	printf("Hello, Holberton");
-	return (0);
+	return 0;
 }
