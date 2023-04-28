@@ -3,8 +3,9 @@
 #include <string.h>
 #include "lists.h"
 /**
- * print_list - prints list.
- * @h: pointer to the first element.
+ * add_node - adds node.
+ * @head: first element.
+ * @str: string literal.
  * Return: number of elements.
  */
 list_t *add_node(list_t **head, const char *str)

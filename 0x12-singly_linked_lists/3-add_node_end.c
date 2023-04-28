@@ -5,6 +5,7 @@
 /**
  * add_node_end - prints list.
  * @head: pointer to the first element.
+ * @str: string literal.
  * Return: pointer to the new element.
  */
 list_t *add_node_end(list_t **head, const char *str)
