@@ -2,17 +2,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * free_listint - frees linked list.
+ * pop_listint - frees the head.
  * @head: pointer to the first element.
  */
-void free_listint(listint_t *head)
+int pop_listint(listint_t **head)
 {
-	listint_t *temp = head;
+	int i;
+	listint_t *new_h;
 
-	while (head)
-	{
-		temp = head;
-		head = head->next;
-		free(temp);
-	}
+	if (*head == NULL || head == NULL)
+		return (0);
+	
+	new_h = (*head)->next;
+	i = (*head)->n;
+	free(*head);
+	*head = new_h;
+	return(i);
 }
