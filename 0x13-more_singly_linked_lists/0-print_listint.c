@@ -4,7 +4,6 @@
 /**
  * print_listint - prints and returns a list of integers.
  * @h: pointer to the first element.
- *
  * Return: number of elements.
  */
 size_t print_listint(const listint_t *h)
