@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * print_listint - prints and returns a list of integers.
- * @h: pointer to the first element.
+ * print_listint_safe - prints and returns a list of integers.
+ * @head: pointer to the first element.
  * Return: number of elements.
  */
 size_t print_listint_safe(const listint_t *head)
@@ -11,6 +11,9 @@ size_t print_listint_safe(const listint_t *head)
 	unsigned int len = 0;
 	const listint_t *slow = head;
 	const listint_t *fast = head;
+
+	if (head == NULL)
+		exit(98);
 
 	while (fast && slow != NULL && fast->next != NULL)
 	{
@@ -20,7 +23,7 @@ size_t print_listint_safe(const listint_t *head)
 		slow = slow->next;
 		if (fast == slow)
 		{
-			printf("elements->[%p] %d\n", (void *)&len, len);
+			printf("-> [%p] %d\n", (void *)&len, len);
 			return (len);
 		}
 	}
