@@ -6,7 +6,7 @@
  * @h: pointer to the first element.
  * Return: number of elements.
  */
-size_t free_listint_safe (listint_t **h)
+size_t free_listint_safe(listint_t **h)
 {
 	unsigned int len = 0;
 	listint_t *slow = *h;
@@ -15,11 +15,11 @@ size_t free_listint_safe (listint_t **h)
 
 	while (fast && slow != NULL && fast->next != NULL)
 	{
-		*h = (*h)->next;
-		free(temp);
-		temp = *h;
+		temp = temp->next;
+		free(*h);
+		*h = temp;
 		len++;
-		fast = fast->next->next;
+		fast = fast->next;
 		slow = slow->next;
 		if (fast == slow)
 		{
