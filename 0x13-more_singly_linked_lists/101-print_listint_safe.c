@@ -8,10 +8,10 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-        const listint_t *fast = head;
-        const listint_t *slow = head;
-        size_t len = 0;
-        size_t placer;
+	const listint_t *fast = head;
+	const listint_t *slow = head;
+	size_t len = 0;
+	size_t placer;
 
 	while (fast != NULL)
 	{
