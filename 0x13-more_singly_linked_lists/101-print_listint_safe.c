@@ -12,9 +12,6 @@ size_t print_listint_safe(const listint_t *head)
 	const listint_t *slow = head;
 	const listint_t *fast = head;
 
-	if (head == NULL)
-		exit(98);
-
 	while (fast && slow != NULL && fast->next != NULL)
 	{
 		printf("[%p] %d\n", (void *)slow, slow->n);
@@ -27,6 +24,8 @@ size_t print_listint_safe(const listint_t *head)
 			return (len);
 		}
 	}
-	return (len);
+	if (head == NULL)
+	exit(98);
 
+	return (len);
 }
