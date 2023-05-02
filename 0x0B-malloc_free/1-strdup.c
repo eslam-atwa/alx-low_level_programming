@@ -25,7 +25,7 @@ char *_strdup(char *str)
 
 	while (i < size)
 	{
-		ar[i] = str[i]; 
+		ar[i] = str[i];
 		i++;
 	}
 
